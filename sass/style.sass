@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap')
+//------------------------------------------------------------------------------------------------------------------
+
+$yellow: #E3BC32
+
+//------------------------------------------------------------------------------------------------------------------
+*
+    box-sizing: border-box
+
+body
+    font-size: 24px
+    font-family: 'Montserrat'
+    font-weight: 600
+    color: #ffffff
+    background-color: #000
+
+.page
+    position: relative
+    display: flex
+    overflow: hidden
+    flex-direction: column
+    min-height: 100%
+
+.container
+    position: relative
+    max-width: 1300px
+    margin: 0 auto
+    padding: 0 15px
+    // ПК
+    @media ( max-width: 1057px)
+        max-width: 970px
+    // Планшет
+    @media ( max-width: 991.98px)
+        max-width: 750px
+    // Телефон
+    @media ( max-width: 767.98px)
+        max-width: none
+    @media ( max-width: 570px)
+        max-width: none
+    @media ( max-width: 360px)
+        min-width: none
+        
+
+//-----------------------------------------------------------------------------------------------------------
+
+.header
+    padding: 12px 0 0 0
+    margin-bottom: 26px
+    @media ( max-width: 767.98px)
+        margin-bottom: 10px
+    &__block
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__logo
+        padding-right: 15px
+    &__nav-menu
+            padding-right: 110px
+            @media ( max-width: 1057px)
+                padding-right: 60px
+            @media ( max-width: 991.98px)
+                padding-right: 30px
+            @media ( max-width: 767.98px)
+                display: none
+    &__burger
+        display: none
+        & span
+            position: absolute
+            width: 100%
+            height: 2px
+            background-color: $yellow
+            top: 9px
+        &::after,
+        &::before
+            content: ''
+            background-color: $yellow
+            position: absolute
+            width: 100%
+            height: 2px
+        &::before
+            top: 0
+        &::after
+            bottom: 0
+        @media ( max-width: 767.98px)
+            display: block
+            position: relative
+            width: 30px
+            height: 20px
+.menu
+    &__link
+        display: flex
+        font-size: 18px
+        font-weight: 500
+        line-height: 22px
+    &__item
+        margin-right: 43px
+        & a
+            font-size: 18px
+            font-weight: 500
+            line-height: 22px
+            color: #fff
+            text-decoration: none
+            &:hover
+                color: $yellow
+        &:last-child
+            margin: 0
+
+//------------------------------------------------------------------------------------------------------------------------
+
+.section-1
+    position: relative
+    padding: 254px 0
+    @media ( max-width: 1057px)
+        padding: 140px 0
+    @media ( max-width: 991.98px)
+        padding: 100px 0
+    @media ( max-width: 570px)
+        padding: 60px 0
+    &__main-cover
+        width: 100%
+        height: 100%
+        position: absolute
+        left: 0
+        top: 0
+        object-fit: cover
+    &__content-block
+        max-width: 480px
+        padding-left: 60px
+        @media ( max-width: 570px)
+            padding-left: 0
+    &__title
+        font-weight: 700
+        font-size: 60px
+        line-height: 73px
+        &:not(:last-child)
+            margin-bottom: 20px
+            @media ( max-width: 767.98px)
+                margin-bottom: 10px
+        @media ( max-width: 767.98px)
+            font-size: 50px
+            line-height: 50px
+        @media ( max-width: 570px)
+            font-size: 35px
+            line-height: 35px
+    &__subtitle
+        font-size: 32px
+        line-height: 39px
+        &:not(:last-child)
+            margin-bottom: 60px
+            @media ( max-width: 767.98px)
+                margin-bottom: 30px
+        @media ( max-width: 767.98px)
+            font-size: 25px
+            line-height: 30px
+        @media ( max-width: 570px)
+            font-size: 20px
+            line-height: 25px
+
+.yellow
+    color: $yellow
+
+.button
+    position: relative
+    left: 0
+    top: 0
+    background-color: $yellow
+    color: #000
+    border-radius: 20px
+    box-shadow: 4px 2px 8px #755F11
+    border: none
+    transition: background-color 0.3s ease 0s, top 0.1s ease 0s
+    &:hover
+        background-color: #cba417
+        animation: button-shadow 1.5s linear 0s infinite
+    &:active
+        top: 2px
+    &_main
+        padding: 18px 42px
+        font-weight: 500
+        font-size: 27px
+        line-height: 33px
+        @media ( max-width: 767.98px)
+            font-size: 20px
+        @media ( max-width: 360px)
+            padding: 10px 20px
+
+
+@keyframes button-shadow
+    0%
+        box-shadow: 4px 2px 8px 2px #755F11
+    25%
+        box-shadow: 2px 2px 8px 4px #755F11
+    50%
+        box-shadow: -4px 2px 8px 2px #755F11
+    75%
+        box-shadow: -2px -2px 8px 4px #755F11
+    100%
+        box-shadow: 4px 2px 8px 2px #755F11
+        
