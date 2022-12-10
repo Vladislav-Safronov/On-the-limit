@@ -187,6 +187,11 @@ body
             padding: 10px 20px
             line-height: 25px
             font-size: 16px
+    &_time-and-price
+        padding: 14px 23px
+        line-height: 29px
+    &_sign-up
+        padding: 17px 33px
 
 
 @keyframes button-shadow
@@ -201,3 +206,60 @@ body
     100%
         box-shadow: 4px 2px 8px 2px #755F11
         
+//------------------------------------------------------------------------------------------------------------------
+
+.section-2
+    &__container
+        display: flex
+        padding: 50px 15px
+    &__content
+        flex: 0 1 48%
+        padding-right: 70px
+    &__img
+        flex: 0 1 52%
+        & img
+            max-width: 100%
+
+.content-block
+    &__title
+        margin-bottom: 30px
+    &__text
+        &:not(:last-child)
+            margin-bottom: 30px
+    &__button-time
+        margin-right: 52px
+    &__buttons
+        &:not(:last-child)
+            margin-bottom: 40px
+    &__button-sign-up
+        margin-right: 20px
+            
+
+
+.title
+    font-weight: 700
+    font-size: 36px
+    line-height: 44px
+.text
+    font-weight: 500
+    line-height: 29px
+.details
+    text-decoration: none
+    color: #666666
+    line-height: 29px
+    position: relative
+    padding: 5px 0
+    &:hover
+        color: $yellow
+    &::after
+        content: ''
+        height: 2px
+        width: 149px
+        background-color: #e5e5e5
+        position: absolute
+        bottom: -3px
+        left: -1px
+
+.image
+    & img
+        border-radius: 40px
