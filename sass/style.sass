@@ -37,6 +37,8 @@ body
         max-width: none
     @media ( max-width: 570px)
         max-width: none
+    @media ( max-width: 425px)
+        min-width: none
     @media ( max-width: 360px)
         min-width: none
         
@@ -187,11 +189,12 @@ body
             padding: 10px 20px
             line-height: 25px
             font-size: 16px
-    &_time-and-price
-        padding: 14px 23px
-        line-height: 29px
     &_sign-up
         padding: 17px 33px
+        @media ( max-width: 767.98px)
+            font-size: 20px
+        @media ( max-width: 425px)
+            font-size: 16px
 
 
 @keyframes button-shadow
@@ -206,33 +209,68 @@ body
     100%
         box-shadow: 4px 2px 8px 2px #755F11
         
-//------------------------------------------------------------------------------------------------------------------
+//-------------Добавлять все секции-----------------------------------------------------------------------------------------------------
+.yellow-line
+    height: 2px
+    width: 100%
+    background-color: $yellow
+    border: none
+    margin: 0
 
-.section-2
+.section-2,
+.section-3,
+.section-4
+    padding: 50px 0
+    @media ( max-width: 767.98px)
+        padding: 30px 0
     &__container
         display: flex
-        padding: 50px 15px
+        @media ( max-width: 991.98px)
+            flex-direction: column
     &__content
         flex: 0 1 48%
         padding-right: 70px
+        @media ( max-width: 991.98px)
+            padding-right: 0
     &__img
         flex: 0 1 52%
         & img
             max-width: 100%
 
 .content-block
+    padding-top: 10px
+    @media ( max-width: 991.98px)
+        margin-bottom: 30px
+    @media ( max-width: 425px)
+        margin-bottom: 20px
     &__title
         margin-bottom: 30px
+        @media ( max-width: 767.98px)
+            margin-bottom: 10px
+        @media ( max-width: 425px)
+            margin-bottom: 0
     &__text
         &:not(:last-child)
             margin-bottom: 30px
-    &__button-time
+            @media ( max-width: 425px)
+                margin-bottom: 20px
+    &__info-time
         margin-right: 52px
-    &__buttons
+        @media ( max-width: 767.98px)
+            margin-right: 40px
+        @media ( max-width: 425px)
+            margin-right: 20px
+    &__info
         &:not(:last-child)
             margin-bottom: 40px
+            @media ( max-width: 1057px)
+                margin: 0
+    &__button-and-details
+        @media ( max-width: 1057px)
+            display: none
     &__button-sign-up
         margin-right: 20px
+
             
 
 
@@ -240,15 +278,40 @@ body
     font-weight: 700
     font-size: 36px
     line-height: 44px
+    @media ( max-width: 767.98px)
+        font-size: 30px
+    @media ( max-width: 425px)
+        font-size: 24px
 .text
     font-weight: 500
     line-height: 29px
+    @media ( max-width: 767.98px)
+        font-size: 20px
+    @media ( max-width: 425px)
+        font-size: 16px
+.info
+    display: inline-block
+    padding: 14px 23px
+    line-height: 29px
+    background-color: $yellow
+    color: #000
+    border-radius: 20px
+    box-shadow: 4px 2px 8px #755F11
+    @media ( max-width: 767.98px)
+        font-size: 20px
+    @media ( max-width: 425px)
+        font-size: 16px
+
 .details
     text-decoration: none
     color: #666666
     line-height: 29px
     position: relative
     padding: 5px 0
+    @media ( max-width: 767.98px)
+        font-size: 20px
+    @media ( max-width: 425px)
+        font-size: 16px
     &:hover
         color: $yellow
     &::after
@@ -259,7 +322,39 @@ body
         position: absolute
         bottom: -3px
         left: -1px
+        @media ( max-width: 767.98px)
+            width: 124px
+        @media ( max-width: 425px)
+            width: 99px
 
 .image
     & img
         border-radius: 40px
+        @media ( max-width: 1057px)
+            margin-bottom: 30px
+        @media ( max-width: 425px)
+            margin-bottom: 20px
+    &__button-and-details
+        display: none
+        @media ( max-width: 1057px)
+            display: block
+    &__button-sign-up
+        @media ( max-width: 1057px)
+            margin-right: 20px
+        @media ( max-width: 425px)
+            margin-right: 10px
+    
+//----------Добавлять нечетные секции--------------------------------------------------------------------------------------------------------
+
+.section-3
+    &__content
+        order: 2
+        padding-right: 0
+        @media ( max-width: 991.98px)
+            order: 1
+    &__img
+        order: 1
+        margin-right: 70px
+        @media ( max-width: 991.98px)
+            margin-right: 0
+            order: 2
