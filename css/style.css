@@ -281,6 +281,7 @@ body {
 }
 .button_sign-up {
   padding: 17px 33px;
+  font-size: 30px;
 }
 @media (max-width: 767.98px) {
   .button_sign-up {
